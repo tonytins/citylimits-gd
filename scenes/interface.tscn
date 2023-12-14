@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxivns71gahtk"]
+
+[ext_resource type="Texture2D" uid="uid://bng0d1sou7c8a" path="res://sprites/coin.png" id="1_yv17j"]
+[ext_resource type="FontFile" uid="uid://d0cxd77jybrcn" path="res://fonts/lilita_one_regular.ttf" id="2_6eq3h"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_q176i"]
+font = ExtResource("2_6eq3h")
+font_size = 24
+shadow_color = Color(0, 0, 0, 0.392157)
+
+[node name="Interface" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="Wallet" type="HBoxContainer" parent="."]
+layout_mode = 0
+anchor_left = 0.0190972
+anchor_top = 0.0277778
+anchor_right = 0.211806
+anchor_bottom = 0.109568
+
+[node name="CashIcon" type="TextureRect" parent="Wallet"]
+layout_mode = 2
+texture = ExtResource("1_yv17j")
+expand_mode = 3
+
+[node name="Cash" type="Label" parent="Wallet"]
+layout_mode = 2
+text = "$10,000"
+label_settings = SubResource("LabelSettings_q176i")

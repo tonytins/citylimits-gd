@@ -1,0 +1,63 @@
+[gd_scene load_steps=6 format=3 uid="uid://bliiefbfmdvs2"]
+
+[ext_resource type="Script" path="res://scripts/builder.gd" id="1_0v0e8"]
+[ext_resource type="Texture2D" uid="uid://bng0d1sou7c8a" path="res://sprites/coin.png" id="2_thubv"]
+[ext_resource type="Texture2D" uid="uid://cbk07cxgshg26" path="res://sprites/selector.png" id="2_xat7u"]
+[ext_resource type="FontFile" uid="uid://d0cxd77jybrcn" path="res://fonts/lilita_one_regular.ttf" id="3_twyvq"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_i6wk0"]
+font = ExtResource("3_twyvq")
+font_size = 24
+shadow_color = Color(0, 0, 0, 0.392157)
+
+[node name="Main2D" type="Node2D"]
+
+[node name="Builder" type="Node2D" parent="." node_paths=PackedStringArray("selector", "selector_container", "view_camera", "cash_display")]
+script = ExtResource("1_0v0e8")
+selector = NodePath("Selector")
+selector_container = NodePath("Selector/Container")
+view_camera = NodePath("../View/Camera2D")
+cash_display = NodePath("../CanvasLayer/Interface/Wallet/Cash")
+
+[node name="Selector" type="Node2D" parent="Builder"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Builder/Selector"]
+position = Vector2(682, 450)
+texture = ExtResource("2_xat7u")
+
+[node name="Container" type="Node2D" parent="Builder/Selector"]
+
+[node name="View" type="Node2D" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="View"]
+position = Vector2(566, 362)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Interface" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="Wallet" type="HBoxContainer" parent="CanvasLayer/Interface"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0190972
+anchor_top = 0.0277778
+anchor_right = 0.211806
+anchor_bottom = 0.109568
+
+[node name="CashIcon" type="TextureRect" parent="CanvasLayer/Interface/Wallet"]
+layout_mode = 2
+texture = ExtResource("2_thubv")
+expand_mode = 3
+
+[node name="Cash" type="Label" parent="CanvasLayer/Interface/Wallet"]
+layout_mode = 2
+text = "$10,000"
+label_settings = SubResource("LabelSettings_i6wk0")
