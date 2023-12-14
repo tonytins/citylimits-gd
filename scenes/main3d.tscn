@@ -12,7 +12,7 @@
 [ext_resource type="Resource" uid="uid://cqvwy36htu81" path="res://structures/road-split.tres" id="7_kqu4g"]
 [ext_resource type="Resource" uid="uid://dveu4dnue0d54" path="res://structures/road-intersection.tres" id="8_1swhv"]
 [ext_resource type="Resource" uid="uid://dqqe3iofnleup" path="res://structures/pavement-fountain.tres" id="8_4il2q"]
-[ext_resource type="Script" path="res://scripts/3d/view.gd" id="8_yovpv"]
+[ext_resource type="Script" path="res://scripts/3d/view3d.gd" id="8_yovpv"]
 [ext_resource type="Resource" uid="uid://tm532uesguhk" path="res://structures/grass.tres" id="9_ifw7y"]
 [ext_resource type="Resource" uid="uid://bh65eqgid4kxy" path="res://structures/building-small-c.tres" id="10_84or2"]
 [ext_resource type="Resource" uid="uid://ccb475jeg7ym5" path="res://structures/grass-trees.tres" id="10_vaeah"]

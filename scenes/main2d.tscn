@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bliiefbfmdvs2"]
+[gd_scene load_steps=7 format=3 uid="uid://bliiefbfmdvs2"]
 
-[ext_resource type="Script" path="res://scripts/builder.gd" id="1_0v0e8"]
+[ext_resource type="Script" path="res://scripts/2d/builder2d.gd" id="1_0v0e8"]
 [ext_resource type="Texture2D" uid="uid://bng0d1sou7c8a" path="res://sprites/coin.png" id="2_thubv"]
 [ext_resource type="Texture2D" uid="uid://cbk07cxgshg26" path="res://sprites/selector.png" id="2_xat7u"]
+[ext_resource type="Script" path="res://scripts/2d/view2d.gd" id="3_2wqv3"]
 [ext_resource type="FontFile" uid="uid://d0cxd77jybrcn" path="res://fonts/lilita_one_regular.ttf" id="3_twyvq"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_i6wk0"]
@@ -12,11 +13,12 @@ shadow_color = Color(0, 0, 0, 0.392157)
 
 [node name="Main2D" type="Node2D"]
 
-[node name="Builder" type="Node2D" parent="." node_paths=PackedStringArray("selector", "selector_container", "view_camera", "cash_display")]
+[node name="Builder" type="Node2D" parent="." node_paths=PackedStringArray("selector", "selector_container", "view_camera", "tile_map", "cash_display")]
 script = ExtResource("1_0v0e8")
 selector = NodePath("Selector")
 selector_container = NodePath("Selector/Container")
-view_camera = NodePath("../View/Camera2D")
+view_camera = NodePath("../View/Camera")
+tile_map = NodePath("../TileMap")
 cash_display = NodePath("../CanvasLayer/Interface/Wallet/Cash")
 
 [node name="Selector" type="Node2D" parent="Builder"]
@@ -28,9 +30,13 @@ texture = ExtResource("2_xat7u")
 [node name="Container" type="Node2D" parent="Builder/Selector"]
 
 [node name="View" type="Node2D" parent="."]
+script = ExtResource("3_2wqv3")
 
-[node name="Camera2D" type="Camera2D" parent="View"]
+[node name="Camera" type="Camera2D" parent="View"]
 position = Vector2(566, 362)
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 2
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
