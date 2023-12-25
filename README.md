@@ -9,25 +9,28 @@
 
 CityLimits is an open source reimagining of SimCity Classic based on Godot. In the long run, I plan on adding on gameplay mechanics used in later iterations. Like it's cousin, everything learned in the making of CityLimits will go towards the building and customization that I've been itching to create.
 
-## Getting Started
+## Features
 
-### Prerequisites
+While CityLimits plans to stick close to the classic SimCity formula as much as possible, I do plan to add in features introduced in later installments, as well as my own touches.
 
-- Godot Engine 4.x
+### Dice Mechanics
 
-### Controls
+One of these unique touches and biggest difference is how random events are tackled. Instead of trying to dig through the Micropolis code, I'm going to streamline the process by using a simple D&D dice engine. So if you think the game rolled you a 1, it probably did. It's just easier to comprehend, like the desktop metaphor.
+
+
+## Controls
 
 | Key | Command |
 | --- | --- |
-| <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> | Move camera |
-| <kbd>F</kbd> | Camera to center |
-| <kbd>Middle mouse button</kbd> | Hold to rotate camera |
-| <kbd>Left mouse button</kbd> | Place building |
-| <kbd>DEL</kbd> | Remove building |
-| <kbd>Right mouse button</kbd> | Rotate building |
-| <kbd>Q</kbd> <kbd>E</kbd>  | Toggle between buildings |
-| <kbd>F1</kbd> | Save |
-| <kbd>F2</kbd> | Load |
+| ``W`` ``A`` ``S`` ``D`` | Move camera |
+| ``F`` | Camera to center |
+| ``Middle mouse button`` | Hold to rotate camera |
+| ``Left mouse button`` | Place building |
+| ``DEL`` | Remove building |
+| ``Right mouse button`` | Rotate building |
+| ``Q`` ``E``  | Toggle between buildings |
+| ``F1`` | Save |
+| ``F2`` | Load |
 
 ## Authors
 

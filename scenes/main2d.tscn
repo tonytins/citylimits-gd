@@ -19,7 +19,7 @@ selector = NodePath("Selector")
 selector_container = NodePath("Selector/Container")
 view_camera = NodePath("../View/Camera")
 tile_map = NodePath("../TileMap")
-cash_display = NodePath("../CanvasLayer/Interface/Wallet/Cash")
+cash_display = NodePath("../CanvasLayer/Interface/Panel/Wallet/Cash")
 
 [node name="Selector" type="Node2D" parent="Builder"]
 
@@ -33,6 +33,7 @@ texture = ExtResource("2_xat7u")
 script = ExtResource("3_2wqv3")
 
 [node name="Camera" type="Camera2D" parent="View"]
+visible = false
 position = Vector2(566, 362)
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -50,20 +51,33 @@ grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 metadata/_edit_lock_ = true
 
-[node name="Wallet" type="HBoxContainer" parent="CanvasLayer/Interface"]
+[node name="Panel" type="Panel" parent="CanvasLayer/Interface"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.0190972
-anchor_top = 0.0277778
-anchor_right = 0.211806
-anchor_bottom = 0.109568
+anchor_top = 0.888889
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+metadata/_edit_use_anchors_ = true
 
-[node name="CashIcon" type="TextureRect" parent="CanvasLayer/Interface/Wallet"]
+[node name="Wallet" type="HBoxContainer" parent="CanvasLayer/Interface/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0130208
+anchor_top = 0.208333
+anchor_right = 0.149306
+anchor_bottom = 0.8125
+alignment = 1
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="CashIcon" type="TextureRect" parent="CanvasLayer/Interface/Panel/Wallet"]
 layout_mode = 2
 texture = ExtResource("2_thubv")
 expand_mode = 3
 
-[node name="Cash" type="Label" parent="CanvasLayer/Interface/Wallet"]
+[node name="Cash" type="Label" parent="CanvasLayer/Interface/Panel/Wallet"]
 layout_mode = 2
 text = "$10,000"
 label_settings = SubResource("LabelSettings_i6wk0")
